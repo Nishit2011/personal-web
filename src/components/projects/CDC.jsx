@@ -1,29 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "../../styles/layout.module.css";
-import cdc1Img from "../../assets/cdc1.jpg";
-import cdc2Img from "../../assets/cdc2.jpg";
-import cdc3Img from "../../assets/cdc3.jpg";
-import cdc4Img from "../../assets/cdc4.jpg";
+
 import { useNavigate } from "react-router-dom";
+import ImageContainer from "../reusables/ImageContainer";
 const CDC = () => {
+  const [imgNum, setImgNum] = useState(1);
   const navigate = useNavigate();
 
-  function handleClick() {
+  const handleClick = () => {
     navigate("/proj");
-  }
+  };
+
   return (
-    <div>
+    <div className={style.pageContent}>
       <div className={style.backBtn} onClick={handleClick}>
         <i className={style.arrow}></i> Back to projects
       </div>
       <h3>Corporate Digital Center</h3>
 
-      <div className={style.projects}>
-        <div className={style.project}>
+      <div className={style.well}>
+        <div className={style.wellContainer}>
           <ul className={style.projectDetail}>
-            <h4>Techonology Stack</h4>
-            <li>Typescript, ReactJS, NodeJS, MongoDB</li>
-            <h4>My Role</h4>
+            <span className={style.techBtn}>Typescript</span>{" "}
+            <span className={style.techBtn}>ReactJS</span>
+            <span className={style.techBtn}>NodeJS</span>{" "}
+            <span className={style.techBtn}>Docker</span>{" "}
+            <span className={style.techBtn}>Kubernetes</span>{" "}
+            <span className={style.techBtn}>MongoDB</span> <h4>My Role</h4>
             <div>
               <li>Built Front End themes on React Material </li>
               <li>Built Front End screens in ReactJS</li>
@@ -33,10 +36,12 @@ const CDC = () => {
             </div>
             <div className={style.projectImageContainer}>
               <h4>Some Images from the application</h4>
-              <img src={cdc1Img} />
-              <img src={cdc2Img} />
-              <img src={cdc3Img} />
-              <img src={cdc4Img} />
+              {console.log("***--", `../../assets/cdc${imgNum}.jpg`)}
+              <ImageContainer imageTitle="cdc" totalImages={4} />
+
+              {/* <img src={cdc2Img} alt="cdc2Img" />
+              <img src={cdc3Img} alt="cdc3Img" />
+              <img src={cdc4Img} alt="cdc4Img" /> */}
             </div>
           </ul>
         </div>

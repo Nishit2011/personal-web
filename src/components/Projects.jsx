@@ -1,18 +1,21 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import style from "../styles/layout.module.css";
 const Projects = () => {
   return (
-    <div>
+    <div className={style.pageContent}>
       <div>
         <h3>Major Projects</h3>
-        <div className={style.projects}>
-          <div className={style.projects}>
-            <div className={style.project}>
+        <h5 className={style.clickNote}>
+          Click on project name for more details
+        </h5>
+        <div className={style.well}>
+          <div className={style.well}>
+            <div className={style.wellContainer}>
               <ul className={style.projectName}>
                 <li>
                   <Link to="/rcd">
-                    <li>Remote Cheque Deposit</li>
+                    <li>Remote Cheque Deposit </li>
                   </Link>
                 </li>
               </ul>
@@ -25,8 +28,8 @@ const Projects = () => {
             </div>
           </div>
 
-          <div className={style.projects}>
-            <div className={style.project}>
+          <div className={style.well}>
+            <div className={style.wellContainer}>
               <ul className={style.projectName}>
                 <Link to="/vms">
                   <li>Voucher Management Service</li>
@@ -41,8 +44,8 @@ const Projects = () => {
               </div>
             </div>
 
-            <div className={style.projects}>
-              <div className={style.project}>
+            <div className={style.well}>
+              <div className={style.wellContainer}>
                 <ul className={style.projectName}>
                   <Link to="/cdc">
                     <li>Corporate Digital Centre</li>
@@ -56,8 +59,8 @@ const Projects = () => {
               </div>
             </div>
 
-            <div className={style.projects}>
-              <div className={style.project}>
+            <div className={style.well}>
+              <div className={style.wellContainer}>
                 <ul className={style.projectName}>
                   <Link to="/cas">
                     <li>Retail Web Application</li>
@@ -74,8 +77,8 @@ const Projects = () => {
               </div>
             </div>
 
-            <div className={style.projects}>
-              <div className={style.project}>
+            <div className={style.well}>
+              <div className={style.wellContainer}>
                 <ul className={style.projectName}>
                   <Link to="/rcd">
                     <li>

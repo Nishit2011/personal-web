@@ -5,7 +5,7 @@ const Photo = () => {
     <div>
       <div className={style.photo}></div>
       <h3 className={style.photoName}>NISHIT RANJAN</h3>
-      <h4>Developer, Designer, Leader</h4>
+      <h4>Developer, Designer, Go-Getter</h4>
     </div>
   );
 };

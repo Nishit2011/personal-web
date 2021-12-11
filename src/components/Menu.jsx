@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from "react";
-import { Link, NavLink } from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 import style from "../styles/layout.module.css";
 const Menu = ({ handleClick, active }) => {
   return (
@@ -8,7 +8,7 @@ const Menu = ({ handleClick, active }) => {
         <li>Employments</li>
       </Link>
       <Link to="/deg">
-        <li>Degree and Certificates</li>
+        <li>Education </li>
       </Link>
       <Link to="/skill">
         <li>Skillset</li>

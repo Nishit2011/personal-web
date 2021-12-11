@@ -8,17 +8,20 @@ const RCD = () => {
     navigate("/proj");
   }
   return (
-    <div>
+    <div className={style.pageContent}>
       <div className={style.backBtn} onClick={handleClick}>
         <i className={style.arrow}></i> Back to projects
       </div>
       <h3>Remote Cheque Deposit</h3>
 
-      <div className={style.projects}>
-        <div className={style.project}>
+      <div className={style.well}>
+        <div className={style.wellContainer}>
           <ul className={style.projectDetail}>
-            <h4>Techonology Stack</h4>
-            <li>Typescript, ReactJS, Docker, Kubernetes, NestJS</li>
+            <span className={style.techBtn}>Typescript</span>{" "}
+            <span className={style.techBtn}>ReactJS</span>
+            <span className={style.techBtn}>NestJS</span>{" "}
+            <span className={style.techBtn}>Docker</span>{" "}
+            <span className={style.techBtn}>PostrgreSQL</span>
             <h4>My Role</h4>
             <div>
               <li>Devised Front End Web Application Architecture </li>

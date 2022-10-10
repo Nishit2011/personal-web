@@ -20,12 +20,12 @@ const Menu = ({ handleClick, active }) => {
      
       <li className={style.projectList}>Hobby</li> */}
 
-      <Link to="/blogs">
+      {/* <Link to="/blogs">
         <li>Blogs</li>
       </Link>
       <Link to="/books">
         <li>Books</li>
-      </Link>
+      </Link> */}
     </div>
   );
 };
